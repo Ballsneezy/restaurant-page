@@ -3,6 +3,15 @@ import createMenuPage from './menu.js';
 import createContactPage from './contact.js';
 import createHomePage from './home.js';
 
+
+//body styles
+document.body.style.margin = "0";
+document.body.style.padding = "0";
+document.body.style.boxSizing = "border-box";
+document.body.style.color = "lime";
+document.body.style.fontFamily = "Arial, sans-serif";
+document.body.style.fontSize = "16px";
+
 // get the buttons, header, nav, and content elements
 const nav = document.querySelector("nav");
 const content = document.querySelector("#content");
@@ -29,12 +38,16 @@ header.classList.add("header");
 header.style.display = "flex";
 header.style.justifyContent = "center";
 header.style.alignItems = "center";
+header.style.backgroundColor = "white";
+header.style.border = "5px solid red";
+header.style.padding = "30px";
+header.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.5)";
+header.style.width = "100vw";
 
 // content styles
 content.classList.add("content");
-content.style.display = "flex";
-content.style.justifyContent = "center";
-content.style.alignItems = "center";
+content.style.width = "100vw";
+
 
 //button styles
 let isBlue = false; //sets the initial state of the buttons to blue
@@ -97,6 +110,8 @@ const contactButton = document.getElementById('contact');
 contactButton.addEventListener('click', () => {
     createContactPage();
 });
+
+
 
 
 createHomePage();
