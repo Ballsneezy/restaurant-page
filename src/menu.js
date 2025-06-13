@@ -30,14 +30,12 @@ export default function createMenuPage() {
     
     // Set up the grid layout (3x3)
     containerDiv.style.display = 'grid';
-    containerDiv.style.gridTemplateColumns = 'repeat(3, 1fr)'; // 3 equal columns
+    containerDiv.style.gridTemplateColumns = 'repeat(3, minmax(200px, 1fr))'; // Using minmax for responsive columns
     containerDiv.style.gap = '20px';                          // Space between grid items
-    containerDiv.style.width = '100vw';
     // Style the container box
-    containerDiv.style.border = '1px solid red';
-    containerDiv.style.boxShadow = '0 0 10px 0 rgba(0, 0, 0, 0.5)';
-    containerDiv.style.backgroundColor = 'white';
-
+    containerDiv.style.boxShadow = '0 0 10px 0 rgba(0, 0, 0, 0.7)';
+    containerDiv.style.padding = '20px';
+    containerDiv.style.margin = '20px';
     // Array of menu items, each with title, price, and description
     const menuItems = [
         { title: 'Burger', price: '$1200', desc: 'Classic beef patty with cheese' },
